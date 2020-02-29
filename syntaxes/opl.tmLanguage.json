@@ -1,0 +1,61 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "OPL",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.opl",
+				"match": "\\b(if|forall|sum|in|minimize)\\b"
+			},{
+				"name": "keyword.operator.opl",
+				"match": "\\b(<|<=|>|>=)\\b"
+			},{
+				"name": "storage.type.opl",
+				"match": "\\b(dvar|range|float|int|boolean)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.opl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.opl",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+			"name": "comment.opl",
+			"patterns": [
+				{
+					"include": "#comment-block"
+				},
+				{
+					"include": "#comment-line"
+				}
+			]
+		},
+		"comment-block": {
+			"name": "comment.block.opl",
+			"begin": "/\\*",
+			"end": "\\*/"
+		},
+		"comment-line": {
+			"name": "comment.line.opl",
+			"match": "(//).*$\\n?"
+		}
+	},
+	"scopeName": "source.opl"
+}

@@ -1,6 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "OPL",
+	"fileTypes": ["mod"],
 	"patterns": [
 		{
 			"include": "#keywords"
@@ -16,13 +17,19 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.opl",
-				"match": "\\b(if|forall|sum|in|minimize)\\b"
+				"match": "\\b(if|forall|sum)\\b"
+			},{
+				"name": "keyword.other.opl",
+				"match": "\\b(assert|in|minimize|maximize|execute|dexpr)\\b"
 			},{
 				"name": "keyword.operator.opl",
 				"match": "\\b(<|<=|>|>=)\\b"
 			},{
+				"name": "storage.type.primitive.opl",
+				"match": "\\b(int\\+|int|float|boolean|pwlFunction|stepFunction)\\b"
+			},{
 				"name": "storage.type.opl",
-				"match": "\\b(dvar|range|float|int|boolean)\\b"
+				"match": "\\b(dvar|range|tuple)\\b"
 			}]
 		},
 		"strings": {

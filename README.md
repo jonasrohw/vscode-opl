@@ -1,20 +1,26 @@
 # OPL Language Syntax Highlighting
 
-This extension provides OPL syntax highlighting.
+This extension provides OPL syntax highlighting. OPL is the language uses in IBM ILOG CPLEX Optimization Studio.
 
 ## Features
 
 - Basic syntax highlighting for OPL language.
+- Basic snippets.
 
 ## Known Issues
 
 - Lack of other keywords.
 
------------------------------------------------------------------------------------------------------------
+---
 
 ## Release Notes
 
 Collection of release notes.
+
+### 0.0.2
+
+- Add snippets for `forall`, `subject to`, `execute`.
+- Add more keywords.
 
 ### 0.0.1
 

@@ -2,12 +2,12 @@
     "name": "opl",
     "displayName": "OPL",
     "description": "OPL Language Syntax Highlighting",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": {
         "name": "Krerkkiat Chusap",
-        "email": "kc555014@ohio.edu"
+        "email": "contact@kchusap.com"
     },
-    "publisher": "krerkkiatc",
+    "publisher": "kchusap",
     "repository": {
 		"type": "git",
 		"url": "https://github.com/krerkkiat/vscode-opl.git"
@@ -16,7 +16,8 @@
         "vscode": "^1.39.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
     "contributes": {
         "languages": [{
@@ -29,6 +30,12 @@
             "language": "opl",
             "scopeName": "source.opl",
             "path": "./syntaxes/opl.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "opl",
+                "path": "./snippets.json"
+            }
+        ]
     }
 }
